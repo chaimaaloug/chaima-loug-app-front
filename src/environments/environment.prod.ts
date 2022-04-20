@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiBaseUrl: "https://chaima-loug-app-back.herokuapp.com",
 };
