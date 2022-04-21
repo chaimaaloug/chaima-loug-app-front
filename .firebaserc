@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "book-app-chaimaa": {
+      "hosting": {
+        "chaima-loug-app-front": [
+          "book-app-chaimaa"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "book-app-chaimaa"
+  }
+}

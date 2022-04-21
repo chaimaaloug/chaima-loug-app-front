@@ -105,6 +105,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "chaima-loug-app-front:build:production",
+            "firebaseProject": "book-app-chaimaa",
+            "firebaseHostingSite": "book-app-chaimaa"
+          }
         }
       }
     }
