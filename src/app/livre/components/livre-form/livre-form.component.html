@@ -1,0 +1,54 @@
+<!-- <p>livre-form works!</p> -->
+
+
+<h2 mat-dialog-title>{{ isUpdateMode ? "Update" : "Add" }} livre form</h2>
+
+<form [formGroup]="livreForm" (ngSubmit)="onSubmit(livreForm.value)">
+
+  <mat-dialog-content class="mat-typography">
+    <mat-form-field appearance="fill">
+      <mat-label>Book Title</mat-label>
+      <input matInput formControlName="bookTitle" />
+    </mat-form-field>
+    <br />
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Book Publisher</mat-label>
+      <input matInput formControlName="bookPublisher" />
+    </mat-form-field>
+    <br />
+
+    <mat-form-field appearance="fill" class="w-100">
+      <mat-label>Book Type</mat-label>
+      <mat-select formControlName="bookType">
+        <mat-option>--</mat-option>
+        <mat-option *ngFor="let type of types" [value]="type">
+          {{ type }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br />
+
+    <mat-form-field appearance="fill">
+      <mat-label>Choose a date</mat-label>
+      <input matInput [matDatepicker]="picker" formControlName="releaseDate" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <br />
+
+
+  </mat-dialog-content>
+  <mat-dialog-actions class="float-right">
+    <button mat-button (click)="closeForm()">Annuler</button>
+    <button
+      mat-raised-button
+      color="primary"
+      type="submit"
+      [disabled]="!livreForm.valid"
+    >
+      {{ isUpdateMode ? "Modifier" : "Ajouter" }}
+    </button>
+  </mat-dialog-actions>
+</form>
+

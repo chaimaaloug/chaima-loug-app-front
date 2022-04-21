@@ -1,0 +1,29 @@
+<!-- <p>livre-details works!</p> -->
+
+<button class="btn" mat-raised-button color="warn" (click)="goBack()">Go Back</button>
+
+<mat-card class="example-card" *ngIf="livre$ | async; let livre">
+    <mat-card-header>
+      <mat-card-title >{{ livre.bookTitle | titlecase  }}
+        </mat-card-title>
+    </mat-card-header>
+  
+    <mat-card-content>
+      <ul>
+        <li><b>Book Publisher :</b> {{ livre.bookPublisher }}</li>
+        <li><b>Book Type :</b> {{ livre.bookType }}</li>
+        <li><b>Release Date :</b> {{ livre.releaseDate }}</li>
+      </ul>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-raised-button color="warn" (click)="deleteLivre(livre.id)">
+        Delete
+      </button>
+      <button mat-raised-button color="primary" (click)="updateLivre(livre)">
+        Update
+      </button>
+    </mat-card-actions>
+  </mat-card>
+  
+

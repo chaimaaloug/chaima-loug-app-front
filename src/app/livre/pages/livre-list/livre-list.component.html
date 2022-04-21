@@ -1,0 +1,51 @@
+
+<button  class="btn" mat-raised-button color="primary" (click)="createLivre()">
+    Create
+  </button>
+  <div class="container">
+    <table mat-table [dataSource]="livres$" class="mat-elevation-z8 demo-table">
+        <!-- id Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> ID </th>
+          <td mat-cell *matCellDef="let livres$"> {{livres$.id}} </td>
+        </ng-container>
+  
+        <!--  Column -->
+        <ng-container matColumnDef="bookTitle">
+          <th mat-header-cell *matHeaderCellDef> Book Title </th>
+          <td mat-cell *matCellDef="let livres$"> {{livres$.bookTitle}} </td>
+        </ng-container>
+  
+        <!--  Column -->
+        <ng-container matColumnDef="bookPublisher">
+          <th mat-header-cell *matHeaderCellDef> Book Publisher </th>
+          <td mat-cell *matCellDef="let livres$"> {{livres$.bookPublisher}} </td>
+        </ng-container>
+
+        <!--  Column -->
+        <ng-container matColumnDef="bookType">
+          <th mat-header-cell *matHeaderCellDef> Book Type </th>
+          <td mat-cell *matCellDef="let livres$"> {{livres$.bookType}} </td>
+        </ng-container>
+        
+        <!-- Date de pub Column -->
+        <ng-container matColumnDef="releaseDate">
+          <th mat-header-cell *matHeaderCellDef> Release Date </th>
+          <td mat-cell *matCellDef="let livres$"> {{livres$.releaseDate}} </td>
+        </ng-container>
+  
+        <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+        <tr
+          mat-row
+          *matRowDef="let row; columns: columnsToDisplay"
+          (click)="showLivreDetails(row)"
+          class="clickable"
+        ></tr>
+    </table>
+  
+  </div>
+  
+  
+  
+  
+  
