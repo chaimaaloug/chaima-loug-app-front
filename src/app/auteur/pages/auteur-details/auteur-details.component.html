@@ -1,1 +1,31 @@
-<p>auteur-details works!</p>
+<!-- <p>auteur-details works!</p> -->
+
+<button class="btn" mat-raised-button color="warn" (click)="goBack()">Go Back</button>
+
+<mat-card class="example-card" *ngIf="auteur$ | async; let auteur">
+    <mat-card-header>
+      <mat-card-title
+        >{{ auteur.firstName | titlecase }}
+        {{ auteur.lastName | uppercase }}</mat-card-title
+      >
+      <mat-card-subtitle>{{ auteur.email | lowercase }}</mat-card-subtitle>
+    </mat-card-header>
+  
+    <mat-card-content>
+      <ul>
+        <li><b>Sexe :</b> {{ auteur.sexe }}</li>
+        <li><b>Date de Naissance :</b> {{ auteur.dateOfBirth }}</li>
+      </ul>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-raised-button color="warn" (click)="deleteAuteur(auteur.id)">
+        Delete
+      </button>
+      <button mat-raised-button color="primary" (click)="updateAuteur(auteur)">
+        Update
+      </button>
+    </mat-card-actions>
+  </mat-card>
+  
+

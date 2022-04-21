@@ -8,6 +8,8 @@ import { AuteurDetailsComponent } from './pages/auteur-details/auteur-details.co
 import { AuteurFormComponent } from './pages/auteur-form/auteur-form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuteurService } from './services/auteur.service';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -21,8 +23,9 @@ import { AuteurService } from './services/auteur.service';
     AuteurRoutingModule,
     SharedModule,
     HttpClientModule,
-   
+    MatDatepickerModule,
+    MatNativeDateModule,
   ],
-  providers: [AuteurService],
+  providers: [AuteurService, MatDatepickerModule, MatNativeDateModule],
 })
 export class AuteurModule { }

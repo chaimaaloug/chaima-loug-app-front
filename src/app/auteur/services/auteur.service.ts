@@ -22,21 +22,21 @@ export class AuteurService {
     );
   }
 
-  createAuteur(auteur: Auteur): Observable<Auteur> {
-    return this._http.post<Auteur>(
+  createAuteur(auteur: Auteur): Observable<string> {
+    return this._http.post<string>(
       `${environment.apiBaseUrl}${this.auteurPath}`,
       auteur
     );
   }
 
-  updateAuteur(auteur: Auteur): Observable<Auteur> {
-    return this._http.put<Auteur>(
+  updateAuteur(auteur: Auteur): Observable<string> {
+    return this._http.put<string>(
       `${environment.apiBaseUrl}${this.auteurPath}/${auteur.id}`,
       auteur
     );
   }
 
-  deleteAuteur(id: number): Observable<any> {
+  deleteAuteur(id: number): Observable<string> {
     return this._http.delete<string>(
       `${environment.apiBaseUrl}${this.auteurPath}/${id}`
     );
