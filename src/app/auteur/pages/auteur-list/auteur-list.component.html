@@ -42,10 +42,10 @@
         <td mat-cell *matCellDef="let auteurs$"> {{auteurs$.dateOfBirth}} </td>
       </ng-container>
 
-      <!-- <ng-container matColumnDef="livre">
+      <ng-container matColumnDef="livre">
         <th mat-header-cell *matHeaderCellDef> Livre </th>
-        <td mat-cell *matCellDef="let auteurs$"> {{auteurs$.livre}} </td>
-      </ng-container> -->
+        <td mat-cell *matCellDef="let auteurs$"> {{auteurs$.livre.bookTitle}} </td>
+      </ng-container>
 
 
       <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>

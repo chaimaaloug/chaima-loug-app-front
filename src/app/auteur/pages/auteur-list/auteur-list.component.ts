@@ -16,27 +16,9 @@ import { AuteurFormData } from 'src/app/core/Models/auteurFormData';
   styleUrls: ['./auteur-list.component.scss']
 })
 
-// export class AuteurListComponent implements OnInit {
-
-//   auteurs$ : Observable <Auteur[]>;
-//   columnsToDisplay = ['id', 'firstName', 'lastName', 'sexe', 'email', 'dateOfBirth', 'actions'];
-
-//   constructor(private _auteurService: AuteurService) {}
-
-//   ngOnInit(): void {
-//     this.auteurs$ = this._auteurService.getAuteurs();
-//   }
-
-//   deleteAuteur(id: number) {
-//     this._auteurService.deleteAuteur(id).subscribe(() => {
-//       this.auteurs$ = this._auteurService.getAuteurs();
-//     });
-//   }
-// }
-
 export class AuteurListComponent implements OnInit {
   auteurs$: Observable<Auteur[]>;
-  columnsToDisplay = ['id', 'firstName', 'lastName', 'sexe', 'email', 'dateOfBirth'];
+  columnsToDisplay = ['id', 'firstName', 'lastName', 'sexe', 'email', 'dateOfBirth', 'livre'];
 
   //Bidouille
   ids: number[] = [];

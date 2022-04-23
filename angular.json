@@ -112,8 +112,8 @@
             "prerender": false,
             "ssr": false,
             "browserTarget": "chaima-loug-app-front:build:production",
-            "firebaseProject": "book-app-chaimaa",
-            "firebaseHostingSite": "book-app-chaimaa"
+            "firebaseProject": "chaima-book-app",
+            "firebaseHostingSite": "chaima-book-app"
           }
         }
       }

@@ -6,9 +6,16 @@
           "book-app-chaimaa"
         ]
       }
+    },
+    "chaima-book-app": {
+      "hosting": {
+        "chaima-loug-app-front": [
+          "chaima-book-app"
+        ]
+      }
     }
   },
   "projects": {
-    "default": "book-app-chaimaa"
+    "default": "chaima-book-app"
   }
 }

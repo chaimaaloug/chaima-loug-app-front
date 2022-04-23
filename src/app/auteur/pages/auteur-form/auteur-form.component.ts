@@ -62,6 +62,10 @@ export class AuteurFormComponent implements OnInit {
         this.data.isUpdateMode ? this.data.auteurToUpdate.email : '',
         [Validators.required, Validators.email],
       ],
+      livre: [
+        this.data.isUpdateMode ? this.data.auteurToUpdate.livre : '',
+        Validators.required,
+      ],
     });
   }
 
